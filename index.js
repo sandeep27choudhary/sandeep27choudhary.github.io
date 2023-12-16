@@ -65,39 +65,45 @@ $(document).ready(function(){
       });
   });
 
-$(document).ready(function () {
-    $("a").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('body,html').animate({
-                scrollTop: $(hash).offset().top
-            }, 1800, function () {
-                window.location.hash = hash;
-            });
-        }
+// Your existing JavaScript code
+
+// Function to fetch blog content from files
+function fetchBlogContent() {
+    // Assuming your blog files are stored in a "blogs" folder
+    const blogFolder = 'blogs/';
+
+    // Add the names of your blog files (without the .txt extension) here
+    const blogFileNames = ['blog1', 'blog2', 'blog3', 'blog4', 'blog5'];
+
+    // Fetch blog content and create blog cards
+    blogFileNames.forEach(fileName => {
+        fetch(`${blogFolder}${fileName}.txt`)
+            .then(response => response.text())
+            .then(content => createBlogCard(fileName, content));
     });
+}
 
-    // Scroll function for changing header styles
-    var width = $(window).width();
-    window.onscroll = function () {
-        if (width >= 1000) {
-            // Your existing scroll function
+// Function to create a blog card
+function createBlogCard(title, content) {
+    const blogSection = document.getElementById('blog');
 
-            // Check if the user has scrolled to the blog section
-            if (document.body.scrollTop > $("#blog").offset().top || document.documentElement.scrollTop > $("#blog").offset().top) {
-                // Add styles for the blog section
-                $("#header").css("background", "#fff");
-                $("#header").css("color", "#000");
-                // Add other styles as needed
-            } else {
-                // Remove styles for the blog section
-                $("#header").css("background", "transparent");
-                $("#header").css("color", "#fff");
-                // Remove other styles as needed
-            }
-        }
-    };
-});
+    // Create blog card elements
+    const card = document.createElement('div');
+    card.className = 'blog-card';
 
-  
+    const cardTitle = document.createElement('h2');
+    cardTitle.textContent = title;
+
+    const cardContent = document.createElement('p');
+    cardContent.textContent = content;
+
+    // Append elements to the blog section
+    card.appendChild(cardTitle);
+    card.appendChild(cardContent);
+    blogSection.appendChild(card);
+}
+
+// Fetch blog content and create blog cards when the page is loaded
+document.addEventListener('DOMContentLoaded', fetchBlogContent);
+
+// Your existing JavaScript code
