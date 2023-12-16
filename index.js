@@ -64,4 +64,40 @@ $(document).ready(function(){
        } 
       });
   });
+
+$(document).ready(function () {
+    $("a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('body,html').animate({
+                scrollTop: $(hash).offset().top
+            }, 1800, function () {
+                window.location.hash = hash;
+            });
+        }
+    });
+
+    // Scroll function for changing header styles
+    var width = $(window).width();
+    window.onscroll = function () {
+        if (width >= 1000) {
+            // Your existing scroll function
+
+            // Check if the user has scrolled to the blog section
+            if (document.body.scrollTop > $("#blog").offset().top || document.documentElement.scrollTop > $("#blog").offset().top) {
+                // Add styles for the blog section
+                $("#header").css("background", "#fff");
+                $("#header").css("color", "#000");
+                // Add other styles as needed
+            } else {
+                // Remove styles for the blog section
+                $("#header").css("background", "transparent");
+                $("#header").css("color", "#fff");
+                // Remove other styles as needed
+            }
+        }
+    };
+});
+
   
