@@ -399,3 +399,23 @@ button:focus {
     color: #000;
   }
 }
+
+#blog {
+    width: 92vw;
+    padding: 6vh 4vw;
+    font-weight: bold;
+}
+
+.blog-entry {
+    margin-bottom: 20px;
+}
+
+.blog-entry h2 {
+    color: rgb(30, 135, 123);
+    font-size: 28px;
+}
+
+.blog-entry p {
+    font-size: 18px;
+}
+
