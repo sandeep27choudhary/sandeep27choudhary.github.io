@@ -400,22 +400,36 @@ button:focus {
   }
 }
 
+
+
+/* Your existing CSS code */
+
+/* Additional styles for the blog section */
 #blog {
-    width: 92vw;
     padding: 6vh 4vw;
-    font-weight: bold;
-}
-
-.blog-entry {
-    margin-bottom: 20px;
-}
-
-.blog-entry h2 {
     color: rgb(30, 135, 123);
-    font-size: 28px;
 }
 
-.blog-entry p {
-    font-size: 18px;
+.blog-card {
+    border: 1px solid rgb(30, 135, 123);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff; /* You can customize this color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
+.blog-card:hover {
+    transform: scale(1.02);
+}
+
+.blog-card h2 {
+    color: rgb(30, 135, 123);
+}
+
+.blog-card p {
+    color: #555; /* You can customize this color */
+}
+
+/* Your existing CSS code */
