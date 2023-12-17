@@ -73,7 +73,7 @@ function fetchBlogContent() {
     const blogFolder = 'blogs/';
 
     // Add the names of your blog files (without the .txt extension) here
-    const blogFileNames = ['GenAI-in-DevOps', 'blog2', 'blog3', 'blog4', 'blog5'];
+    const blogFileNames = ['GenAI-in-DevOps'];
 
     // Fetch blog content and create blog cards
     blogFileNames.forEach(fileName => {
