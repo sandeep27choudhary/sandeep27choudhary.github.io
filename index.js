@@ -54,7 +54,7 @@ setTimeout(function(){
 $(document).ready(function(){
     $("#resume-link").on('click', function() {
         // Replace 'your_one_drive_resume_link' with the actual OneDrive link to your resume PDF
-        const oneDriveResumeLink = 'https://1drv.ms/b/s!AtmnY_dDoH4adWwZKzaD3fyLz18?e=dcfIMP';
+        const oneDriveResumeLink = 'https://docs.google.com/document/d/e/2PACX-1vTQOkYZW0e9A6UhROME4YKC8pw5G-Gx0y7HHQTdIeR0b_oD-O3mRY5s_cUsHrcmAQpWtC6BIG6qR6nC/pub';
         
         // Open the OneDrive link in a new window to trigger the download
         window.open(oneDriveResumeLink, '_blank');
