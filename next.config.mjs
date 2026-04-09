@@ -5,8 +5,17 @@ try {
   // ignore error
 }
 
+const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
+const isUserOrOrgPagesRepo = repositoryName.endsWith('.github.io')
+const shouldUseRepoBasePath = process.env.GITHUB_ACTIONS === 'true' && !isUserOrOrgPagesRepo
+const basePath = shouldUseRepoBasePath ? `/${repositoryName}` : ''
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  basePath,
+  assetPrefix: basePath || undefined,
   eslint: {
     ignoreDuringBuilds: true,
   },

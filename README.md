@@ -194,9 +194,25 @@ npm start
 
 ## 🌐 Deployment
 
-This project is deployed on Vercel. Any push to the `main` branch triggers automatic deployment.
+This project is configured for **GitHub Pages static deployment** using Next.js static export.
 
-**Live URL:** [https://www.duhops.world](https://www.duhops.world)
+### GitHub Pages Setup
+
+1. In GitHub repository settings, set:
+   - **Pages > Build and deployment > Source** to **GitHub Actions**
+2. Push to the `master` branch.
+3. GitHub Actions runs `.github/workflows/deploy-github-pages.yml` to:
+   - Install dependencies
+   - Run `next build` (exports static site to `out/`)
+   - Deploy `out/` to GitHub Pages
+
+### Local Deployment Build Check
+
+```bash
+npm run build:pages
+```
+
+The static output is generated in `out/`.
 
 ## 📊 Content Strategy
 
