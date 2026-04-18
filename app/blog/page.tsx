@@ -14,6 +14,14 @@ export const metadata: Metadata = {
 
 const featuredPosts = [
   {
+    title: "Building an AI-Powered SRE Platform: Architecture & Design Principles",
+    description: "How I designed a production-grade SRE platform where deterministic pipelines handle infrastructure logic and AI is constrained to explanation — making it safe and reliable.",
+    image: "https://loremflickr.com/600/400/ai,sre,kubernetes,platform",
+    category: "AI Agents",
+    readTime: "10 min read",
+    href: "/blog/sre-ai-platform",
+  },
+  {
     title: "AWS Multi-Account Strategy: Best Practices for Enterprise",
     description: "Learn how to implement a secure and efficient multi-account strategy in AWS for enterprise organizations.",
     image: "https://loremflickr.com/600/400/aws,cloud,security",
