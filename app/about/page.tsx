@@ -29,9 +29,9 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">Professional Summary</h2>
           <p className="text-muted-foreground leading-relaxed">
-            I'm a Cloud Infrastructure & DevOps Engineer with over 3 years of experience in designing,
-            implementing, and managing cloud-based solutions. My expertise spans AWS services, cloud infrastructure,
-            and DevOps practices, enabling businesses to achieve scalable and efficient infrastructure.
+            4+ years in DevOps, with deep hands-on experience in cloud infrastructure, CI/CD, and Kubernetes-based systems.
+            What sets my work apart: a growing focus on building AI agent architectures that automate complex, real-world
+            engineering problems. I care about systems that scale cleanly, fail gracefully, and need minimal hand-holding.
           </p>
           <div className="pt-4">
             <Button asChild variant="outline">
@@ -49,27 +49,53 @@ export default function AboutPage() {
             <div className="rounded-lg border border-border/40 bg-card p-6">
               <h3 className="flex items-center text-xl font-bold">
                 <Award className="mr-2 h-5 w-5 text-primary" />
-                AWS Cloud Infrastructure
+                Cloud Infrastructure
               </h3>
               <ul className="mt-4 space-y-2 text-muted-foreground">
-                <li>• Amazon ECS, EC2, and Lambda</li>
-                <li>• S3, RDS, and DynamoDB</li>
-                <li>• CloudFront and Route 53</li>
-                <li>• IAM and Security Groups</li>
-                <li>• CloudWatch and CloudTrail</li>
+                <li>• AWS (ECS, EC2, Lambda, RDS, S3)</li>
+                <li>• Kubernetes & container orchestration</li>
+                <li>• Infrastructure as Code (Terraform)</li>
+                <li>• IAM, networking & security</li>
+                <li>• CloudWatch, alerting & observability</li>
               </ul>
             </div>
             <div className="rounded-lg border border-border/40 bg-card p-6">
               <h3 className="flex items-center text-xl font-bold">
                 <Award className="mr-2 h-5 w-5 text-primary" />
-                DevOps Practices
+                DevOps & Automation
               </h3>
               <ul className="mt-4 space-y-2 text-muted-foreground">
-                <li>• CI/CD pipeline implementation</li>
-                <li>• Infrastructure as Code</li>
-                <li>• Docker containerization</li>
-                <li>• Monitoring and logging</li>
-                <li>• Automation and scripting</li>
+                <li>• CI/CD pipeline design & optimization</li>
+                <li>• Docker & Kubernetes deployments</li>
+                <li>• Scripting & workflow automation</li>
+                <li>• GitOps & release engineering</li>
+                <li>• Monitoring, logging & incident response</li>
+              </ul>
+            </div>
+            <div className="rounded-lg border border-border/40 bg-card p-6">
+              <h3 className="flex items-center text-xl font-bold">
+                <Award className="mr-2 h-5 w-5 text-primary" />
+                AI Agent Systems
+              </h3>
+              <ul className="mt-4 space-y-2 text-muted-foreground">
+                <li>• Designing multi-agent architectures</li>
+                <li>• LLM integration & prompt engineering</li>
+                <li>• Agentic workflows for DevOps tasks</li>
+                <li>• RAG pipelines & knowledge systems</li>
+                <li>• AI-driven infrastructure automation</li>
+              </ul>
+            </div>
+            <div className="rounded-lg border border-border/40 bg-card p-6">
+              <h3 className="flex items-center text-xl font-bold">
+                <Award className="mr-2 h-5 w-5 text-primary" />
+                Scalability & Reliability
+              </h3>
+              <ul className="mt-4 space-y-2 text-muted-foreground">
+                <li>• High-availability system design</li>
+                <li>• Performance tuning & cost optimization</li>
+                <li>• Fault tolerance & disaster recovery</li>
+                <li>• Load balancing & auto-scaling</li>
+                <li>• SLO/SLA definition & enforcement</li>
               </ul>
             </div>
           </div>
