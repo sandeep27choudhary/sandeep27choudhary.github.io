@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Server, Cloud, GitBranch } from "lucide-react"
+import { ArrowRight, Server, Cloud, GitBranch, Bot, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ParticlesBackground from "@/components/particles-background"
 export default function Home() {
@@ -61,6 +61,43 @@ export default function Home() {
               <h3 className="text-xl font-bold">CI/CD Automation</h3>
               <p className="text-muted-foreground">Streamlined workflows with GitHub Actions, Terraform, and IaC</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Product */}
+      <section className="py-12 md:py-20">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center text-center space-y-4 mb-10">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Featured Product</h2>
+            <p className="max-w-[600px] text-muted-foreground md:text-lg">
+              Built to push what's possible at the intersection of AI and reliability engineering.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto rounded-lg border border-border/40 bg-card p-8 space-y-5">
+            <div className="flex items-center space-x-3">
+              <div className="rounded-full bg-primary/10 p-3">
+                <Bot className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold">SRE-AI Platform</h3>
+            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              An AI-powered SRE platform that automates incident detection, root cause analysis, and remediation using intelligent agents.
+              Built to reduce MTTR and bring reliability engineering into the AI era.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["AI Agents", "SRE", "Kubernetes", "LLM", "Automation"].map((tag) => (
+                <span key={tag} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <Button asChild variant="outline">
+              <Link href="https://sandeep27choudhary.github.io/sre-ai-platform-distribution/" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4" />
+                View SRE-AI Platform
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

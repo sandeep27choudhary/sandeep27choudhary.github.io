@@ -14,8 +14,8 @@ const navLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/blog/videos", label: "Videos" },
   { href: "/downloads", label: "Downloads" },
+  { href: "/my-products", label: "My Products" },
   { href: "/contact", label: "Contact" },
-  { href: "https://news.duhops.world", label: "News", external: true },
 ]
 
 export default function Navbar() {
