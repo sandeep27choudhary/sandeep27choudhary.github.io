@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ExternalLink, Bot } from "lucide-react"
+import { ExternalLink, Bot, ShieldAlert } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const products = [
@@ -10,6 +10,14 @@ const products = [
     tags: ["AI Agents", "SRE", "Kubernetes", "LLM", "Automation"],
     url: "https://sandeep27choudhary.github.io/sre-ai-platform-distribution/",
     icon: <Bot className="h-6 w-6 text-primary" />,
+  },
+  {
+    name: "TRTE — Top Risk Triage Engine",
+    description:
+      "Turn scanner noise into an ordered, LLM-enriched action list. Ingests findings from any scanner (Snyk, Trivy, Grype, Semgrep), scores them with a transparent deterministic rule engine, correlates related vulnerabilities, and delivers a ranked \"fix this first\" list. Open-source and self-hosted.",
+    tags: ["Security", "Open Source", "FastAPI", "LLM", "Python", "DevSecOps"],
+    url: "https://sandeep27choudhary.github.io/trte-engine/#integrate",
+    icon: <ShieldAlert className="h-6 w-6 text-primary" />,
   },
 ]
 
